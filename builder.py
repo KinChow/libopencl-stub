@@ -154,6 +154,8 @@ class CMakeAndroidBuilder(CMakeBuilder):
             os.environ[env], "build", "cmake", "android.toolchain.cmake"
         )
         self.config_cmd += [
+            "-G",
+            "Ninja",
             f"-DCMAKE_TOOLCHAIN_FILE={cmake_toolchain}",
             "-DANDROID_ABI=arm64-v8a",
             "-DANDROID_STL=c++_shared",
@@ -172,6 +174,8 @@ class CMakeOhosBuilder(CMakeBuilder):
             os.environ[env], "build", "cmake", "ohos.toolchain.cmake"
         )
         self.config_cmd += [
+            "-G",
+            "Ninja",
             f"-DCMAKE_TOOLCHAIN_FILE={cmake_toolchain}",
             "-DANDROID_ABI=arm64-v8a",
             "-DANDROID_STL=c++_shared",

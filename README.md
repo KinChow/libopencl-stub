@@ -27,10 +27,10 @@ Default paths will be searched otherwise
 
 ```shell
 # 编译Windows静态库
-python build.py --platfrom=Windows
+python build.py --platform=Windows
 
 # 编译Android静态库
-python build.py --platfrom=Android
+python build.py --platform=Android
 
 # 清理编译产物
 python build.py --clean
