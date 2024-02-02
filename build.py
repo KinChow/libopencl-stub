@@ -29,4 +29,4 @@ if __name__ == "__main__":
         builder.clean()
         exit(0)
     builder.build()
-    # builder.install()
+    builder.install()

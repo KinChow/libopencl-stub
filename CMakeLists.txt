@@ -20,3 +20,6 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR
   target_compile_options(OpenCL PRIVATE -O2 -Wall)
 endif()
 
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/output)
+file(GLOB allCopyFiles  "${PROJECT_SOURCE_DIR}/include/*")
+file(COPY ${allCopyFiles} DESTINATION ${LIBRARY_OUTPUT_PATH})
