@@ -6,15 +6,35 @@ A stub opecl library that dynamically dlopen/dlsyms opencl implementations at ru
 
 
  LIBOPENCL_SO_PATH      -- Path to opencl so that will be searched first
- 
+
  LIBOPENCL_SO_PATH_2    -- Searched second
- 
+
  LIBOPENCL_SO_PATH_3    -- Searched third
- 
+
  LIBOPENCL_SO_PATH_4    -- Searched fourth
- 
- 
+
  
 
 Default paths will be searched otherwise
+
+
+
+## Update
+
+### 2024/2/3
+
+更新编译脚本，使用python指令编译，支持编译Windows MSVC和Android静态库，命令如下
+
+```shell
+# 编译Windows静态库
+python build.py --platfrom=Windows
+
+# 编译Android静态库
+python build.py --platfrom=Android
+
+# 清理编译产物
+python build.py --clean
+```
+
+
 
