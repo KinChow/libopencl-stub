@@ -31,7 +31,9 @@ static const char *default_so_paths[] = {
     "/data/data/org.pocl.libs/files/lib/libpocl.so",
     "libOpenCL.so"};
 #elif defined(_WIN32)
-static const char *default_so_paths[] = {"OpenCL.dll"};
+static const char *default_so_paths[] = {
+    "C:\\Windows\\System32\\OpenCL.dll",
+    "OpenCL.dll"};
 #elif defined(__linux__)
 static const char *default_so_paths[] = {
     "/usr/lib/libOpenCL.so",     "/usr/local/lib/libOpenCL.so",

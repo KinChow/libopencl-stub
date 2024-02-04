@@ -8,6 +8,9 @@
 #ifndef ILIBLOADER
 #define ILIBLOADER
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 // 打开动态链接库
 int OpenLib(const char *libName, void **handle);
 
@@ -16,5 +19,9 @@ void *LoadFunc(void *handle, const char *funcName);
 
 // 关闭动态链接库
 int CloseLib(void *handle);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // ILIBLOADER

@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
+project(OpenCL)
+
 set(LIB_LOADER_DIR external/lib_loader)
 add_subdirectory(${PROJECT_SOURCE_DIR}/${LIB_LOADER_DIR})
 include_directories(
