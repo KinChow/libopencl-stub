@@ -20,6 +20,15 @@ Default paths will be searched otherwise
 
 
 ## Update
+### 2024/6/22
+
+更新代码，命令如下
+
+```shell
+git submodule update --init --recursive --remote
+```
+
+
 
 ### 2024/2/3
 

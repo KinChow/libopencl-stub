@@ -1,0 +1,6 @@
+[submodule "builder"]
+	path = builder
+	url = https://github.com/KinChow/builder.git
+[submodule "external/lib-loader"]
+	path = external/lib-loader
+	url = https://github.com/KinChow/lib-loader.git

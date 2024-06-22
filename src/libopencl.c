@@ -11,7 +11,7 @@
 
 #include <stdlib.h>
 #include <sys/stat.h>
-#include "ILibLoader.h"
+#include "LibLoader.h"
 #include "libopencl.h"
 
 #if defined(__APPLE__) || defined(__MACOSX)
