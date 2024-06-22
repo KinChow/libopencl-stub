@@ -21,16 +21,18 @@ if (BUILD_LIBRARY)
     add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory ${OPENCL_HEADER_DIR} ${LIBRARY_OUTPUT_PATH}/include
     )
+    target_link_libraries(OpenCL PRIVATE LibLoader)
 else()
     add_library(OpenCL INTERFACE)
     target_include_directories(OpenCL INTERFACE ${OPENCL_HEADER_DIR})
     target_sources(OpenCL INTERFACE ${OPENCL_SRC_DIR})
+    target_link_libraries(OpenCL INTERFACE LibLoader)
     if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR
     CMAKE_CXX_COMPILER_ID STREQUAL "GNU"   OR
     CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
-        target_compile_options(OpenCL PRIVATE -O2 -Wall)
+        target_compile_options(OpenCL INTERFACE -O2 -Wall)
     endif()
 endif()
 
-target_link_libraries(OpenCL PRIVATE LibLoader)
+
 
